@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.ArrayAdapter;
 import android.widget.GridLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements  CabeceraAdapter.OnClickListener {
 
     private CabeceraAdapter cabeceraAdapter;
+    private final static String url = "https://rickandmortyapi.com/api/character";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,8 @@ public class MainActivity extends AppCompatActivity implements  CabeceraAdapter.
 
     @Override
     public void onClick(int pos) {
-        //Intent intent = new Intent(this,Detalles.class);
-        Toast.makeText(this,"Pos num: "+pos+" clicked",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this,Detalles.class);
+        startActivity(intent);
+        //Toast.makeText(this,"Pos num: "+pos+" clicked",Toast.LENGTH_SHORT).show();
     }
 }
