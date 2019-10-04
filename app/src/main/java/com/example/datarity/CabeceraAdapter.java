@@ -22,6 +22,7 @@ public class CabeceraAdapter extends RecyclerView.Adapter<CabeceraAdapter.MyView
         static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
             // each data item is just a string in this case
             TextView nombre;
+            TextView image;
             CardView items;
             OnClickListener onClickListener;
             MyViewHolder(View v, OnClickListener onClickListener) {
@@ -59,6 +60,7 @@ public class CabeceraAdapter extends RecyclerView.Adapter<CabeceraAdapter.MyView
             // - get element from your dataset at this position
             // - replace the contents of the view with that element
             holder.nombre.setText(mDataset.get(position).getNombre());
+            holder.image.setText(mDataset.get(position).getImage());
 
         }
 
