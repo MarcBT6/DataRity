@@ -6,9 +6,9 @@ import retrofit2.http.GET;
 
 public interface PostService {
 
-    String API_ROUTE = "/character";
+    String API_ROUTE = "character";
 
     @GET(API_ROUTE)
-    Call<List<Header>> getPost();
+    Call<List<Header>> getHeader();
 
 }

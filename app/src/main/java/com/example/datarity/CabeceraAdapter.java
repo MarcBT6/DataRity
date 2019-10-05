@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class CabeceraAdapter extends RecyclerView.Adapter<CabeceraAdapter.MyViewHolder>{
-        private ArrayList<Header> mDataset;
+        private ArrayList<Header> mDataset= new ArrayList<>();
         private OnClickListener onClickListener;
 
 
@@ -40,7 +40,6 @@ public class CabeceraAdapter extends RecyclerView.Adapter<CabeceraAdapter.MyView
     }
         // Provide a suitable constructor (depends on the kind of dataset)
         public CabeceraAdapter(ArrayList<Header> myDataset, OnClickListener onClickListener) {
-            mDataset = myDataset;
             this.onClickListener = onClickListener;
         }
 
